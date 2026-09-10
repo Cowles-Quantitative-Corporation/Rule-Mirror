@@ -35,19 +35,19 @@ def main() -> int:
         node = executable("node")
         npm = executable("npm")
         python = existing(VENV / "bin" / "python3", "Python virtual environment")
-        alembic = existing(VENV / "bin" / "alembic", "Alembic executable")
-        uvicorn = existing(VENV / "bin" / "uvicorn", "Uvicorn executable")
         existing(WEB / "node_modules" / ".bin" / "vite", "web dependencies")
         run([node, "--version"])
         run([str(python), "-c", "import alembic, fastapi, sqlalchemy, uvicorn"])
         run([npm, "--prefix", str(WEB), "run", "build"])
-        run([str(alembic), "upgrade", "head"])
+        run([str(python), "-m", "alembic", "upgrade", "head"])
         environment = os.environ.copy()
         environment["PYTHONPATH"] = str(ROOT / "backend")
-        run([str(uvicorn), "app.main:app", "--host", "127.0.0.1", "--port", "8000"], environment)
+        run([str(python), "-m", "uvicorn", "app.main:app", "--host", "127.0.0.1", "--port", "1600"], environment)
     except LocalSetupError as error:
         print(f"RuleMirror could not start: {error}", file=sys.stderr)
         return 1
+    except KeyboardInterrupt:
+        return 0
     except subprocess.CalledProcessError as error:
         print(f"RuleMirror stopped because a required command failed with exit code {error.returncode}.", file=sys.stderr)
         return error.returncode or 1
