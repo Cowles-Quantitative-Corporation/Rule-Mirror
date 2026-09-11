@@ -1,17 +1,18 @@
 RULE MIRROR PROPRIETARY SOURCE-AVAILABLE LICENSE
-Version 1.1 - August 2026
+Version 1.2 — September 2026
 
-Copyright (c) 2026 Silas Cowles. All rights reserved.
+Copyright © 2026 Cowles Quantitative Corporation. All rights reserved.
+Original Creator, Founder, and CEO of Cowles Quantitative Corporation: Silas Cowles (silasproff-eng)
 
 NOTICE: THIS SOFTWARE IS PROPRIETARY AND IS NOT OPEN SOURCE.
 
-This license applies to the source code, object code, algorithms, scoring systems, interfaces, documentation, graphics, branding, data structures, configuration, and other original materials made available in this repository by Rule Mirror or its owner, collectively the "Software." Third-party materials remain subject to their respective licenses and terms.
+This license applies to the source code, object code, models, trade reconstruction engines, database architectures, interfaces, documentation, graphics, branding, data structures, configuration, and other original materials made available in this repository by Cowles Quantitative Corporation, its brand divisions, or subsidiaries (collectively, the “Software”). Third-party materials remain subject to their respective licenses and terms.
 
 1. OWNERSHIP AND LIMITED SOURCE AVAILABILITY
 
-The Software is made publicly viewable for evaluation, security review, product review, and demonstration. Silas Cowles retains all copyright, trademark, trade-secret, patent, contractual, and other rights that may apply to the Software.
+The Software is made publicly viewable for evaluation, security review, product review, and demonstration. Cowles Quantitative Corporation retains all copyright, trademark, trade-secret, patent, contractual, and other rights that may apply to the Software.
 
-No ownership interest is transferred. Except for rights that GitHub independently requires under its Terms of Service to operate a public repository, including viewing and forking through GitHub functionality, no license or permission is granted unless expressly stated in a separate written agreement signed by Silas Cowles.
+No ownership interest is transferred. Except for rights that GitHub independently requires under its Terms of Service to operate a public repository—including viewing and forking through GitHub’s functionality—no license or permission is granted unless expressly stated in a separate written agreement signed by an authorized owner of Cowles Quantitative Corporation.
 
 2. NO GENERAL LICENSE TO USE
 
@@ -25,74 +26,74 @@ Without prior express written permission, you may not directly or indirectly:
 
 (a) use the Software for commercial activity, revenue generation, internal business operations, consulting, investment services, financial services, or any product or service supplied to another person;
 
-(b) use the Software, its architecture, workflows, interfaces, scoring logic, signals, outputs, documentation, or non-public implementation details to build, operate, benchmark, validate, or improve a competing or substantially similar product or service;
+(b) use the Software, its architecture, workflows, interfaces, trade reconstruction logic, parsing mechanisms, metrics, prompts, outputs, documentation, or non-public implementation details to build, operate, benchmark, validate, or improve a competing or substantially similar product or service;
 
-(c) reverse engineer, decompile, disassemble, extract, reconstruct, discover, reproduce, or attempt to derive any algorithm, scoring method, signal, rule, API behavior, security mechanism, or non-public implementation detail, except only to the limited extent that applicable law expressly prohibits this restriction;
+(c) reverse engineer, decompile, disassemble, extract, reconstruct, discover, reproduce, or attempt to derive any algorithm, trade-journal model, transaction parser, parsing rule, API behavior, security mechanism, or non-public implementation detail, except only to the limited extent that applicable law expressly prohibits this restriction;
 
 (d) scrape, crawl, systematically download, mirror, archive, index, harvest, or use automated means to collect repository content, except for ordinary indexing or caching performed by GitHub to operate the repository;
 
 (e) use the Software or repository content to train, fine-tune, evaluate, benchmark, ground, augment, or otherwise develop an artificial-intelligence, machine-learning, statistical, or automated decision system;
 
-(f) remove, alter, obscure, or misrepresent any copyright, trademark, attribution, proprietary, financial-risk, security, or licensing notice;
+(f) remove, alter, obscure, or misrepresent any copyright, trademark, creator credit, attribution, proprietary, financial-risk, security, or licensing notice;
 
-(g) use "Rule Mirror," "RuleMirror," associated logos, product names, domain names, visual identity, or confusingly similar marks;
+(g) use “Cowles Quantitative Corporation,” “CQC,” “Rule Mirror,” “rulemirror.com,” associated logos, product names, domain names, visual identity, or confusingly similar marks;
 
-(h) bypass or attempt to bypass authentication, authorization, access controls, rate limits, technical protections, or usage restrictions;
+(h) bypass or attempt to bypass authentication, authorization, access controls, rate limits, payment controls, subscription restrictions, technical protections, or usage restrictions;
 
-(i) expose, transmit, retain, or misuse API credentials, access tokens, private user information, signing materials, or protected market data; or
+(i) expose, transmit, retain, or misuse API credentials, OAuth secrets, access tokens, private user information, signing materials, or brokerage export schemas; or
 
 (j) use the Software for unlawful, deceptive, abusive, infringing, harmful, or unauthorized purposes.
 
 4. THIRD-PARTY SERVICES, DATA, AND MATERIALS
 
-This license grants no rights to third-party APIs, market data, brokerage services, charting services, libraries, trademarks, or other third-party materials. Market-data providers, platform providers, hosting providers, and other service providers may impose separate registration, attribution, display, redistribution, privacy, security, commercial-use, and approval requirements.
+This license grants no rights to third-party APIs, brokerage data exports, charting services, libraries, trademarks, or other third-party materials. Charles Schwab, individual trading platforms, payment providers, and other service providers may impose separate registration, attribution, display, redistribution, privacy, security, commercial-use, and approval requirements.
 
-Possession of this repository does not authorize access to or redistribution of third-party data, does not create a brokerage or advisory relationship, and does not imply affiliation with or endorsement by any third party.
+Possession of this repository does not authorize access to or redistribution of third-party assets, does not create a brokerage or advisory relationship, and does not imply affiliation with or endorsement by any third party.
 
 5. CONTRIBUTIONS
 
-No pull request, patch, suggestion, issue submission, code contribution, documentation contribution, or other material is accepted under an implied license. Rule Mirror may reject, close, remove, or decline to incorporate any submission.
+No pull request, patch, suggestion, issue submission, code contribution, documentation contribution, or other material is accepted under an implied license. Cowles Quantitative Corporation may reject, close, remove, or decline to incorporate any submission.
 
-Any contribution accepted for incorporation requires separate written terms establishing ownership or licensing rights before it is merged. Submission of material does not obligate Rule Mirror or Silas Cowles to use, compensate for, or maintain it.
+Any contribution accepted for incorporation requires separate written terms establishing ownership or licensing rights before it is merged. Submission of material does not obligate Cowles Quantitative Corporation to use, compensate for, or maintain it.
 
 6. NO TRADEMARK OR PUBLICITY LICENSE
 
-No trademark, trade dress, publicity, endorsement, sponsorship, or branding right is granted. You may not represent that you are affiliated with, sponsored by, approved by, or acting for Rule Mirror, Silas Cowles, or any third-party provider without written authorization from the relevant rights holder.
+No trademark, trade dress, publicity, endorsement, sponsorship, or branding right is granted. You may not represent that you are affiliated with, sponsored by, approved by, or acting for Cowles Quantitative Corporation, Rule Mirror, or any other provider without written authorization from the relevant rights holder.
 
 7. FINANCIAL AND INFORMATIONAL DISCLAIMER
 
-The Software is intended for informational, research, demonstration, and educational purposes only. It does not provide personalized investment, financial, legal, tax, accounting, brokerage, or fiduciary advice and does not guarantee any result.
+The Software is intended for informational, journaling, self-review, and educational purposes only. It does not provide personalized investment, financial, legal, tax, accounting, brokerage, or fiduciary advice and does not guarantee any result.
 
-Market data, indicators, scores, signals, patterns, explanations, backtests, simulations, and trade reviews may be delayed, incomplete, inaccurate, unavailable, or unsuitable. Simulated and historical results do not represent actual execution and do not guarantee future results. Users are solely responsible for decisions, regulatory obligations, taxes, and losses.
+Brokerage data imports, transaction mappings, historical metrics, win-rate calculations, and strategy alignment scores may be delayed, incomplete, inaccurate, unavailable, or unsuitable. Reconstructed trade metrics do not guarantee future performance. Users are solely responsible for decisions, regulatory obligations, taxes, and losses.
 
 8. NO WARRANTY
 
-TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE SOFTWARE IS PROVIDED "AS IS" AND "AS AVAILABLE," WITH ALL FAULTS AND WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, WHETHER EXPRESS, IMPLIED, STATUTORY, OR OTHERWISE, INCLUDING WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, NON-INFRINGEMENT, ACCURACY, COMPLETENESS, AVAILABILITY, SECURITY, PERFORMANCE, OR RESULTS.
+TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE SOFTWARE IS PROVIDED “AS IS” AND “AS AVAILABLE,” WITH ALL FAULTS AND WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, WHETHER EXPRESS, IMPLIED, STATUTORY, OR OTHERWISE, INCLUDING WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, NON-INFRINGEMENT, ACCURACY, COMPLETENESS, AVAILABILITY, SECURITY, PERFORMANCE, OR RESULTS.
 
 9. LIMITATION OF LIABILITY
 
-TO THE MAXIMUM EXTENT PERMITTED BY LAW, RULE MIRROR, SILAS COWLES, AND THEIR OWNERS, DEVELOPERS, CONTRIBUTORS, AFFILIATES, LICENSORS, AND SERVICE PROVIDERS WILL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, CONSEQUENTIAL, RELIANCE, OR PUNITIVE DAMAGES; LOSS OF DATA, PROFITS, REVENUE, BUSINESS, GOODWILL, OPPORTUNITY, OR INVESTMENTS; TRADING LOSSES; SECURITY INCIDENTS; OR CLAIMS ARISING FROM ACCESS TO, INABILITY TO ACCESS, OR USE OF THE SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+TO THE MAXIMUM EXTENT PERMITTED BY LAW, COWLES QUANTITATIVE CORPORATION AND ITS OWNERS, DEVELOPERS, CONTRIBUTORS, AFFILIATES, LICENSORS, AND SERVICE PROVIDERS WILL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, CONSEQUENTIAL, RELIANCE, OR PUNITIVE DAMAGES; LOSS OF DATA, PROFITS, REVENUE, BUSINESS, GOODWILL, OPPORTUNITY, OR INVESTMENTS; TRADING LOSSES; SECURITY INCIDENTS; OR CLAIMS ARISING FROM ACCESS TO, INABILITY TO ACCESS, OR USE OF THE SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
 
 Nothing in this license excludes liability that cannot lawfully be excluded or limited.
 
 10. TERMINATION
 
-Any limited permission granted by Rule Mirror or Silas Cowles terminates automatically upon violation of this license. Upon termination, you must cease all unauthorized use and delete copies in your possession or control, except copies that GitHub independently maintains or that applicable law requires you to preserve.
+Any limited permission granted by Cowles Quantitative Corporation terminates automatically upon violation of this license. Upon termination, you must cease all unauthorized use and delete copies in your possession or control, except copies that GitHub independently maintains or that applicable law requires you to preserve.
 
 Sections concerning ownership, restrictions, third-party rights, disclaimers, limitations, termination, and remedies survive termination.
 
 11. REMEDIES
 
-Unauthorized use may cause harm for which monetary damages are inadequate. Subject to applicable law, Rule Mirror or Silas Cowles may seek injunctive relief, damages, disgorgement of profits, recovery of reasonable enforcement costs, and any other available remedy.
+Unauthorized use may cause harm for which monetary damages are inadequate. Subject to applicable law, Cowles Quantitative Corporation may seek injunctive relief, damages, disgorgement of profits, recovery of reasonable enforcement costs, and any other available remedy.
 
 12. NO WAIVER; SEVERABILITY; ENTIRE PERMISSION
 
 Failure to enforce a provision is not a waiver. If a provision is held invalid or unenforceable, it will be enforced to the maximum lawful extent and the remaining provisions will continue in effect.
 
-No oral statement, repository description, issue comment, pull-request discussion, or informal communication grants additional rights. Any exception, commercial license, redistribution right, deployment permission, or other authorization must be contained in a separate written agreement signed by Silas Cowles.
+No oral statement, repository description, issue comment, pull-request discussion, or informal communication grants additional rights. Any exception, commercial license, redistribution right, deployment permission, or other authorization must be contained in a separate written agreement signed by an authorized owner of Cowles Quantitative Corporation.
 
 13. CONTACT AND LEGAL REVIEW
 
-Requests for written permission or commercial licensing must be sent to silas@rulemirror.com.
+Requests for written permission or commercial licensing must be sent through the official contact information published by Cowles Quantitative Corporation.
 
 This is a custom proprietary license. Repository publication and this license do not replace advice from qualified legal counsel regarding enforceability, intellectual-property ownership, financial regulation, market-data rights, privacy, consumer protection, or third-party platform requirements.
