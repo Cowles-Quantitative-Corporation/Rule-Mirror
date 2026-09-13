@@ -154,6 +154,13 @@ h3 { margin-bottom: 7px; font-size: 17px; }
 .icon-button:hover { color: var(--ink); background: var(--surface); }
 .menu-button { display: none; margin-right: 15px; font-size: 20px; }
 .content { width: min(1260px, 100%); margin: 0 auto; padding: clamp(30px, 5vw, 64px) clamp(24px, 5vw, 70px) 80px; }
+.advertising { display: grid; justify-items: center; gap: 10px; margin-top: 36px; padding-top: 20px; border-top: 1px solid var(--line); }
+.advertising > p { margin: 0; color: var(--faint); font: 10px 'DM Mono', monospace; letter-spacing: .08em; text-transform: uppercase; }
+.ad-frame { overflow: hidden; max-width: 100%; background: var(--surface); }
+.ad-frame iframe { display: block; width: 100%; height: 100%; border: 0; }
+.ad-frame-native { width: min(100%, 728px); height: 250px; }
+.ad-frame-desktop { width: 728px; height: 90px; }
+.ad-frame-mobile { display: none; width: 320px; height: 50px; }
 .page-header { display: flex; align-items: end; justify-content: space-between; gap: 25px; margin-bottom: 34px; }
 .page-header .button { flex: 0 0 auto; }
 .metric-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-bottom: 18px; }
@@ -401,6 +408,9 @@ h3 { margin-bottom: 7px; font-size: 17px; }
   .account-search-wrap input { width: 100%; min-width: 0; }
   .search-submit { display: none; }
   .content { padding: 32px 22px 60px; }
+  .ad-frame-native { height: 250px; }
+  .ad-frame-desktop { display: none; }
+  .ad-frame-mobile { display: block; }
   .page-header { align-items: start; flex-direction: column; margin-bottom: 26px; }
   .page-header .button { width: 100%; }
   .metric-grid { grid-template-columns: 1fr 1fr; gap: 9px; }
