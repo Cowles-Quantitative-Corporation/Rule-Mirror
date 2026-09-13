@@ -270,10 +270,33 @@ function navItem(page: Page, label: string, glyph: string) {
 }
 
 function advertisingView() {
-  const nativeDocument = '<!doctype html><html><body><div id="container-8b5176f953c3d360b1af81ebd3d4afc4"></div><script async="async" data-cfasync="false" src="https://pl31315350.profitableratecpmnetwork.com/8b5176f953c3d360b1af81ebd3d4afc4/invoke.js"></script></body></html>'
-  const desktopDocument = '<!doctype html><html><body><script>var atOptions={key:"6c365f2a65337b818381ef4e2dfd1757",format:"iframe",height:90,width:728,params:{}};</script><script src="https://www.highrevenueformat.com/6c365f2a65337b818381ef4e2dfd1757/invoke.js"></script></body></html>'
-  const mobileDocument = '<!doctype html><html><body><script>var atOptions={key:"83c7f4353a691c8b530dc86236b66ef1",format:"iframe",height:50,width:320,params:{}};</script><script src="https://www.highrevenueformat.com/83c7f4353a691c8b530dc86236b66ef1/invoke.js"></script></body></html>'
-  return `<section class="advertising" aria-label="Advertising"><p>Advertisement</p><div class="ad-frame ad-frame-native"><iframe title="Sponsored content" sandbox="allow-scripts allow-popups" referrerpolicy="strict-origin-when-cross-origin" srcdoc='${nativeDocument}'></iframe></div><div class="ad-frame ad-frame-desktop"><iframe title="Sponsored content" sandbox="allow-scripts allow-popups" referrerpolicy="strict-origin-when-cross-origin" srcdoc='${desktopDocument}'></iframe></div><div class="ad-frame ad-frame-mobile"><iframe title="Sponsored content" sandbox="allow-scripts allow-popups" referrerpolicy="strict-origin-when-cross-origin" srcdoc='${mobileDocument}'></iframe></div></section>`
+  return '<section class="advertising" aria-label="Advertising"><p>Advertisement</p><div class="ad-frame ad-frame-native" id="native-ad-slot"><div id="container-8b5176f953c3d360b1af81ebd3d4afc4"></div></div><div class="ad-frame ad-frame-desktop" id="desktop-ad-slot"></div><div class="ad-frame ad-frame-mobile" id="mobile-ad-slot"></div></section>'
+}
+
+function loadAdvertisements() {
+  const nativeSlot = mount.querySelector<HTMLElement>('#native-ad-slot')
+  if (!nativeSlot || nativeSlot.dataset.loaded === 'true') return
+  nativeSlot.dataset.loaded = 'true'
+  const nativeScript = document.createElement('script')
+  nativeScript.async = true
+  nativeScript.dataset.cfasync = 'false'
+  nativeScript.src = 'https://pl31315350.profitableratecpmnetwork.com/8b5176f953c3d360b1af81ebd3d4afc4/invoke.js'
+  nativeSlot.append(nativeScript)
+  const optionsTarget = window as Window & { atOptions?: { key: string; format: string; height: number; width: number; params: Record<string, never> } }
+  const loadMobile = () => {
+    optionsTarget.atOptions = { key: '83c7f4353a691c8b530dc86236b66ef1', format: 'iframe', height: 50, width: 320, params: {} }
+    const mobileScript = document.createElement('script')
+    mobileScript.async = false
+    mobileScript.src = 'https://www.highrevenueformat.com/83c7f4353a691c8b530dc86236b66ef1/invoke.js'
+    mount.querySelector('#mobile-ad-slot')?.append(mobileScript)
+  }
+  optionsTarget.atOptions = { key: '6c365f2a65337b818381ef4e2dfd1757', format: 'iframe', height: 90, width: 728, params: {} }
+  const desktopScript = document.createElement('script')
+  desktopScript.async = false
+  desktopScript.src = 'https://www.highrevenueformat.com/6c365f2a65337b818381ef4e2dfd1757/invoke.js'
+  desktopScript.addEventListener('load', loadMobile, { once: true })
+  desktopScript.addEventListener('error', loadMobile, { once: true })
+  mount.querySelector('#desktop-ad-slot')?.append(desktopScript)
 }
 
 function shellView() {
@@ -394,6 +417,7 @@ function render() {
   document.documentElement.dataset.theme = state.profile.theme
   mount.innerHTML = state.tokens ? shellView() : authView()
   bindEvents()
+  if (state.tokens) loadAdvertisements()
   if (state.tokens && !state.hydrated) {
     state.hydrated = true
     void hydrateWorkspace()
