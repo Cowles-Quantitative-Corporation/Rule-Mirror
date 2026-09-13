@@ -57,6 +57,7 @@ from app.imports.reconstruction import reconstruct
 from app.market_data.registry import configured_provider
 from app.strategies.catalog import catalog_payload, definition_for
 from app.strategies.vwap_reclaim import DEFAULT_DEFINITION, evaluate, result_payload
+from app.services.cqc_entitlements import cqc_entitlements_for_email
 
 router = APIRouter(prefix="/api/v1")
 
@@ -316,6 +317,15 @@ def own_profile(user_id: str = Depends(current_user_id), session: Session = Depe
     if not user:
         raise HTTPException(404, detail={"code": "not_found", "message": "Account was not found"})
     return public_profile_payload(session, user)
+
+
+@router.get("/account/entitlement")
+def account_entitlement(user_id: str = Depends(current_user_id), session: Session = Depends(database)):
+    """Return only the signed-in member's effective CQC product access."""
+    user = session.get(User, user_id)
+    if not user:
+        raise HTTPException(404, detail={"code": "not_found", "message": "Account was not found"})
+    return cqc_entitlements_for_email(user.email)
 
 
 @router.post("/portfolio/import", status_code=201)

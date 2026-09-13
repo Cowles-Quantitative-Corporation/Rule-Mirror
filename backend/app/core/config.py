@@ -19,6 +19,11 @@ class Settings(BaseSettings):
     analysis_run_stale_seconds: int = 120
     max_csv_bytes: int = 2_000_000
     max_csv_rows: int = 20_000
+    # CQC Max is resolved by Oryntra's billing authority. The request contains
+    # an opaque HMAC subject, not the member's email or product data.
+    cqc_entitlement_api_url: str = ""
+    cqc_entitlement_shared_secret: str = ""
+    cqc_entitlement_timeout_seconds: float = 3.0
     model_config = SettingsConfigDict(env_file=".env", extra="ignore")
 
     @model_validator(mode="after")
